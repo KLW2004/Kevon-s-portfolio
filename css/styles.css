@@ -1,0 +1,270 @@
+/*
+Author: Kevon Witherspoon
+Date: 2/3/2025
+File name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style rule for images */
+img {
+	max-width: 100%;
+	display: block;
+}
+/* Style rules for mobile viewport */
+
+/* Hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+/*style rules for body */
+body {
+	background-color: #00D49F;
+}
+
+/* Style rules for header content */
+header {
+    text-align: center;
+    font-size: 1.5em;
+    color: #000;
+}
+
+header h1 {
+    font-family: 'Trebunchet MS', sans-serif;
+    font-style: rockwell;
+	text-align:center;
+}
+
+header img {
+	height: 155px;
+	width: 155px;
+	position: sticky;
+}
+
+/* Style rules for hamburger menu */
+.mobile-nav a {
+	color: #8DC63F;
+	background-color: #4A4144;
+	font-family: 'Time New Roman', serif;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.menu-icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0; 
+}
+
+nav {
+    background-color: #4A4144;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: block;
+    font-size: 2em;
+    border-top: 1px solid #e5e9fc;
+}
+
+nav li a {
+    display: block;
+    color: #8DC63F;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-links id */
+.mobile {
+    display: block;
+}
+
+.tablet-desktop, #menu-links {
+    display: none;
+}
+
+/* Style rules for main content */
+main {
+    padding: 2%;
+    background-color: #2E282B;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+main p {
+    font-size: 1.25em;
+	text-align: left;
+	color: #FFF;
+}
+
+main img {
+	width: 90px;
+	height: 150px;
+	display: block;
+	margin: 0 auto;
+	animation-name: spin;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+	0%{ transform: rotate(0deg);
+		
+	}
+	25%{ transform: rotate(70deg);
+	}
+	50%{ transform: rotate(-70deg);
+	}
+	100%{ transform: rotate(0deg);
+	}
+
+}
+
+main h2 {
+	text-align: center;
+	color: #FFF;
+}
+
+
+main li {
+	color: #FFF;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.action {
+    font-size: 1.25em;
+    color: #373684;
+    font-weight: bold;
+}
+
+#info {
+    clear: left;
+    background-color: #c0caf7;
+    padding: 1% 2%;
+}
+
+#info ul {
+    margin-left: 10%;
+}
+
+.round {
+    border-radius: 8px; 
+}
+
+#contact {
+    text-align: center;
+}
+
+.tel-link {
+    color: #373684;
+    padding: 2%;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
+}
+
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.65em;
+    clear: left;
+}
+
+footer a {
+    color: #4645a8;
+    text-decoration: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 550px), print {
+    
+    /* Tablet Viewport: Show tab-desk class, hide mobile class*/
+    .tablet-desktop {
+        display: block ;
+    }
+	
+    .mobile, .mobile-nav {
+        display: none;
+    }
+	
+    /* Tablet Viewport: Style rule for header content */
+    span.tab-desk {
+        display: inline;
+    }
+    
+    /* Tablet Viewport: Style rules for nav area */
+    nav li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #e5e9fc;
+        font-size: 1.5em;
+    }
+    
+    nav li:last-child {
+        border-right: none;
+    }
+    
+    nav li a {
+        padding: 0.25em 0.5em;
+    }
+    
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px), print {
+    
+    /* Desktop Viewport: Style rule for header */
+    header {
+        padding: 2%;
+    }
+    
+    /* Desktop Viewport: Style rules for nav area */
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+    
+    nav li a:hover {
+        color: #4A4144;
+        background-color: #8DC63F;
+		transform: scale(1.4);
+    }
+    
+}
+
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    
+}
+
+
